@@ -1,34 +1,15 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('build') {
+        stage('Print Build Number') {
             steps {
-                echo 'build'
+                echo "Build Number: ${BUILD_NUMBER}"
+            }
+        }
+        stage('List Files') {
+            steps {
                 sh 'ls'
-            }
-        }
-         stage('package') {
-            steps {
-                echo 'package'
-                sh '''
-                    echo ${BUILD_NUMBER}
-                    echo ${SYS_ADMIN}
-                '''
-            }
-        }
-         stage('test') {
-            steps {
-                echo 'test'
-                sh "pwd"
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'deploy'
-                sh """
-                    cat --help
-                """
             }
         }
     }
