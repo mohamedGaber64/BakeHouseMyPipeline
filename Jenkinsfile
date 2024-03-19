@@ -21,17 +21,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building ... slaves'
+                echo 'Building ... Multibranching '
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing ... slaves'
+                echo 'Testing ... Multibranching '
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying ... slaves'
+                echo 'Deploying ... Multibranching'
             }
         }
     }
