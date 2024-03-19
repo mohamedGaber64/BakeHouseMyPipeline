@@ -14,3 +14,31 @@ pipeline {
         }
     }
 }
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building ... slaves'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing ... slaves'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying ... slaves'
+            }
+        }
+    }
+}
+
+
+
+
+
+
